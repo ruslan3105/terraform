@@ -28,7 +28,7 @@ resource "aws_security_group" "webtraffic" {
 
     dynamic "ingress" {
         iterator = port
-        for_each = ver.ingressrules
+        for_each = var.ingressrules
         content {
         from_port = port.value
         to_port = port.value
@@ -39,7 +39,7 @@ resource "aws_security_group" "webtraffic" {
         
     dynamic "egress" {
         iterator = port
-        for_each = ver.egressrules
+        for_each = var.egressrules
         content {
         from_port = port.value
         to_port = port.value
