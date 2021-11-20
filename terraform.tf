@@ -1,6 +1,6 @@
 provider "aws" {
-    access_key = "AKIASBK2Z7EQY6NWPLHM"
-    secret_key = "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"
+    access_key = 
+    secret_key = 
     region = "eu-central-1"
 }
 variable "ingressrules"{
